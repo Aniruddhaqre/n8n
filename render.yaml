@@ -3,7 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
-    branch: main
+    branch: master
     envVars:
       - key: GENERIC_TIMEZONE
         value: Asia/Kolkata
