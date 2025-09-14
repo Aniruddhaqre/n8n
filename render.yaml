@@ -3,7 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
-    branch: master
+    branch: main
     envVars:
       - key: GENERIC_TIMEZONE
         value: Asia/Kolkata
@@ -13,8 +13,6 @@ services:
         value: yourusername       # 👈 change this
       - key: N8N_BASIC_AUTH_PASSWORD
         value: yourpassword       # 👈 change this
-      - key: N8N_HOST
-        value: n8n.onrender.com   # 👈 replace with your Render service URL
       - key: N8N_PORT
         value: "5678"
 
@@ -30,6 +28,6 @@ services:
       - key: DB_POSTGRESDB_USER
         value: neondb_owner
       - key: DB_POSTGRESDB_PASSWORD
-        sync: false   # 👈 set this in Render Dashboard manually (safer)
+        sync: false   # 👈 set manually in Render Dashboard
       - key: DB_POSTGRESDB_SSL_CA
         value: "true"
